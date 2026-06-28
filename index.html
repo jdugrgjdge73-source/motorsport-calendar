@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RaceCal | 赛车赛历聚合</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <img src="./assets/motorsport-calendar-hero.png" alt="赛车赛道与赛历网格" class="hero-image" />
+        <div class="hero-overlay">
+          <nav class="topbar" aria-label="主导航">
+            <div class="brand">
+              <span class="brand-mark">RC</span>
+              <span>RaceCal</span>
+            </div>
+            <div class="top-actions">
+              <button class="icon-button" aria-label="搜索">⌕</button>
+              <button class="primary-button">同步日历</button>
+            </div>
+          </nav>
+
+          <div class="hero-copy">
+            <p class="eyebrow">全球赛车赛历聚合</p>
+            <h1>按赛事或车手，整理你的全年比赛提醒。</h1>
+            <p class="lead">
+              覆盖 F1、FE、FE 2026-27、WEC、WRC、F2、F3、F4、Super Formula、IndyCar、NASCAR、NLS、勒芒24小时、MotoGP 等赛事。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="赛历工作台">
+        <aside class="sidebar">
+          <div class="mode-toggle" role="tablist" aria-label="查看方式">
+            <button class="mode-button active" data-mode="series" role="tab" aria-selected="true">赛事</button>
+            <button class="mode-button" data-mode="driver" role="tab" aria-selected="false">车手</button>
+          </div>
+
+          <label class="search-box">
+            <span>搜索</span>
+            <input id="searchInput" type="search" placeholder="F1 / Verstappen / WEC" />
+          </label>
+
+          <div class="section-title">
+            <span id="listTitle">赛事分类</span>
+            <small id="listCount">14</small>
+          </div>
+          <div class="list-shell">
+            <div id="categoryList" class="category-list"></div>
+            <div id="alphaIndex" class="alpha-index" aria-label="车手首字母索引"></div>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow" id="panelEyebrow">2026 Season</p>
+              <h2 id="panelTitle">Formula 1</h2>
+              <p id="panelMeta" class="muted">24 个大奖赛周末，显示北京时间</p>
+            </div>
+
+            <div class="calendar-controls">
+              <button id="selectUpcomingBtn" class="secondary-button">选择未开始</button>
+              <button id="clearSelectionBtn" class="secondary-button">清空</button>
+              <label>
+                <span>提醒</span>
+                <select id="reminderSelect">
+                  <option value="10">提前 10 分钟</option>
+                  <option value="30">提前 30 分钟</option>
+                  <option value="60">提前 1 小时</option>
+                </select>
+              </label>
+              <button id="downloadBtn" class="primary-button">导出已选</button>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat">
+              <span id="nextRaceDate">06.28</span>
+              <small>下一场</small>
+            </div>
+            <div class="stat">
+              <span id="nextRaceTime">21:00</span>
+              <small>北京时间</small>
+            </div>
+            <div class="stat">
+              <span id="eventCount">6</span>
+              <small>已收录事项</small>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <button class="filter-chip active" data-filter="all">全部</button>
+            <button class="filter-chip" data-filter="practice">练习</button>
+            <button class="filter-chip" data-filter="sprintQualifying">冲刺排位</button>
+            <button class="filter-chip" data-filter="sprint">冲刺赛</button>
+            <button class="filter-chip" data-filter="race">正赛</button>
+            <button class="filter-chip" data-filter="qualifying">排位</button>
+            <button class="filter-chip" data-filter="endurance">耐力赛</button>
+          </div>
+
+          <div id="scheduleList" class="schedule-list" aria-live="polite"></div>
+        </section>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
