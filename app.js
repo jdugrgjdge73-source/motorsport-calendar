@@ -42,7 +42,7 @@ const seriesCatalog = [
   {
     id: "f1",
     name: "Formula 1",
-    meta: "F1 世界锦标赛，2026 赛季按周末 session 展示",
+    meta: "世界一级方程式锦标赛",
     tag: "F1",
     events: [
       ...f1Weekend("Australian Grand Prix", "Melbourne · 澳大利亚", "2026-03-08", "13:00"),
@@ -73,7 +73,7 @@ const seriesCatalog = [
   {
     id: "fe",
     name: "Formula E",
-    meta: "2025-26 第12赛季，按图中北京时间导入练习/排位/正赛",
+    meta: "电动方程式世界锦标赛",
     tag: "FE",
     events: [
       [bjt("2025-12-06", "03:30"), "Sao Paulo E-Prix R1 一练/三练", "Sao Paulo · 巴西", "practice", "FE"],
@@ -143,7 +143,7 @@ const seriesCatalog = [
   {
     id: "fe27",
     name: "Formula E 2026-27",
-    meta: "2026-27 初版赛历，按图二日期导入正赛日",
+    meta: "电动方程式 2026-27 赛季",
     tag: "FE27",
     events: [
       [bjt("2026-12-18", "00:00"), "Jeddah E-Prix R1", "Jeddah · 沙特阿拉伯", "race", "FE27", "dateOnly"],
@@ -172,7 +172,7 @@ const seriesCatalog = [
   {
     id: "wec",
     name: "WEC",
-    meta: "世界耐力锦标赛，勒芒24小时已合并为 WEC 分站展示",
+    meta: "世界耐力锦标赛",
     tag: "WEC",
     events: [
       dateOnly("2026-04-14", "WEC-意大利官方序幕", "Imola · 意大利", "practice", "WEC"),
@@ -190,7 +190,7 @@ const seriesCatalog = [
   {
     id: "wrc",
     name: "WRC",
-    meta: "世界拉力锦标赛，2026 赛季日期级赛历",
+    meta: "世界拉力锦标赛",
     tag: "WRC",
     events: [
       dateOnly("2026-01-22", "Rallye Monte-Carlo 开始", "Monaco / France", "race", "WRC"),
@@ -212,7 +212,7 @@ const seriesCatalog = [
   {
     id: "f2",
     name: "Formula 2",
-    meta: "FIA Formula 2，2026 赛季支持赛主赛日历",
+    meta: "FIA 二级方程式锦标赛",
     tag: "F2",
     events: [
       ["2026-03-08T03:30:00Z", "Melbourne Feature Race", "Albert Park · 澳大利亚", "race", "F2"],
@@ -236,7 +236,7 @@ const seriesCatalog = [
   {
     id: "f3",
     name: "Formula 3",
-    meta: "FIA Formula 3，2026 赛季支持赛主赛日历",
+    meta: "FIA 三级方程式锦标赛",
     tag: "F3",
     events: [
       ["2026-03-08T02:00:00Z", "Melbourne Feature Race", "Albert Park · 澳大利亚", "race", "F3"],
@@ -254,7 +254,7 @@ const seriesCatalog = [
   {
     id: "f1academy",
     name: "F1 Academy",
-    meta: "F1 Academy 2026，按最新公开赛历展示；未公开精确时刻的场次为日期级",
+    meta: "F1 女子青训方程式赛事",
     tag: "F1A",
     events: [
       dateOnly("2026-03-14", "F1 Academy 上海 反向发车赛", "Shanghai International Circuit · 中国", "race", "F1A"),
@@ -276,7 +276,7 @@ const seriesCatalog = [
   {
     id: "superformula",
     name: "Super Formula",
-    meta: "日本顶级方程式赛事，2026 日期级赛历",
+    meta: "日本顶级方程式锦标赛",
     tag: "SF",
     events: [
       dateOnly("2026-04-03", "Motegi Round 1", "Mobility Resort Motegi · 日本", "race", "SF"),
@@ -296,7 +296,7 @@ const seriesCatalog = [
   {
     id: "indycar",
     name: "IndyCar",
-    meta: "IndyCar 2026 赛季完整日期级赛历",
+    meta: "北美顶级开放轮赛事",
     tag: "INDY",
     events: [
       dateOnly("2026-03-01", "Grand Prix of St. Petersburg", "St. Petersburg · 美国", "race", "IndyCar"),
@@ -322,7 +322,7 @@ const seriesCatalog = [
   {
     id: "nascar",
     name: "NASCAR",
-    meta: "NASCAR Cup Series 2026 正赛日期级赛历",
+    meta: "NASCAR 杯系列赛",
     tag: "NASCAR",
     events: [
       dateOnly("2026-02-01", "Clash", "Bowman Gray Stadium · 美国", "race", "NASCAR"),
@@ -368,7 +368,7 @@ const seriesCatalog = [
   {
     id: "nls",
     name: "NLS",
-    meta: "纽博格林耐力系列 2026 日期级赛历",
+    meta: "纽博格林耐力系列赛",
     tag: "NLS",
     events: [
       dateOnly("2026-03-21", "NLS 1", "Nurburgring Nordschleife · 德国", "endurance", "NLS"),
@@ -384,7 +384,7 @@ const seriesCatalog = [
   {
     id: "motogp",
     name: "MotoGP",
-    meta: "MotoGP 2026 大奖赛正赛日期级完整赛历",
+    meta: "世界摩托车锦标赛最高组别",
     tag: "MGP",
     events: [
       dateOnly("2026-03-01", "Thai Grand Prix", "Buriram · 泰国", "race", "MotoGP"),
@@ -437,27 +437,25 @@ const driverSeeds = [
   ["Lance Stroll", "Aston Martin", ["f1"]],
   ["Max Verstappen", "Red Bull Racing", ["f1", "nls"]],
 
-  ["Jake Dennis", "Andretti", ["fe"]],
-  ["Antonio Felix da Costa", "Alpine Endurance Team / Jaguar TCS Racing", ["fe", "wec"]],
+  ["Jake Dennis", "Andretti Formula E", ["fe"]],
+  ["Felipe Drugovich", "Andretti Formula E", ["fe"]],
+  ["Antonio Felix da Costa", "Jaguar TCS Racing / Alpine Endurance Team", ["fe", "wec"]],
   ["Lucas di Grassi", "Lola Yamaha ABT", ["fe"]],
-  ["Robin Frijns", "Envision", ["fe"]],
   ["Maximilian Gunther", "DS Penske", ["fe"]],
-  ["Taylor Barnard", "McLaren", ["fe"]],
+  ["Taylor Barnard", "DS Penske", ["fe"]],
   ["Zane Maloney", "Lola Yamaha ABT", ["fe"]],
   ["Edoardo Mortara", "Mahindra", ["fe"]],
   ["Nico Muller", "Porsche", ["fe"]],
   ["Norman Nato", "Nissan", ["fe"]],
   ["Pascal Wehrlein", "Porsche", ["fe"]],
-  ["Stoffel Vandoorne", "Citroen Racing", ["fe"]],
-  ["Jean-Eric Vergne", "DS Penske", ["fe"]],
+  ["Jean-Eric Vergne", "Citroen Racing", ["fe"]],
   ["Oliver Rowland", "Nissan", ["fe"]],
   ["Sebastien Buemi", "Envision", ["fe"]],
   ["Nick Cassidy", "Citroen Racing", ["fe"]],
-  ["Mitch Evans", "Jaguar", ["fe"]],
+  ["Mitch Evans", "Jaguar TCS Racing", ["fe"]],
   ["Nyck de Vries", "Mahindra", ["fe"]],
-  ["Dan Ticktum", "Cupra Kiro", ["fe"]],
+  ["Dan Ticktum", "CUPRA Kiro", ["fe"]],
   ["Pepe Marti", "CUPRA Kiro", ["fe"]],
-  ["Felipe Drugovich", "Andretti", ["fe"]],
   ["Joel Eriksson", "Envision", ["fe"]],
 
   ["Tom Gamble", "Aston Martin THOR Team", ["wec"]],
@@ -481,7 +479,7 @@ const driverSeeds = [
   ["Kevin Magnussen", "BMW M Team WRT", ["wec"]],
   ["Raffaele Marciello", "BMW M Team WRT", ["wec", "nls"]],
   ["Dries Vanthoor", "BMW M Team WRT", ["wec", "nls"]],
-  ["Robin Frijns", "BMW M Team WRT / Envision", ["fe", "wec"]],
+  ["Robin Frijns", "BMW M Team WRT", ["wec"]],
   ["Rene Rast", "BMW M Team WRT", ["wec"]],
   ["Sheldon van der Linde", "BMW M Team WRT", ["wec", "nls"]],
   ["Pipo Derani", "Genesis Magma Racing", ["wec"]],
@@ -506,7 +504,7 @@ const driverSeeds = [
   ["Yifei Ye", "AF Corse", ["wec"]],
   ["Nick Cassidy", "Peugeot TotalEnergies / Citroen Racing", ["fe", "wec"]],
   ["Paul di Resta", "Peugeot TotalEnergies", ["wec"]],
-  ["Stoffel Vandoorne", "Peugeot TotalEnergies / Citroen Racing", ["fe", "wec"]],
+  ["Stoffel Vandoorne", "Peugeot TotalEnergies", ["wec"]],
   ["Loic Duval", "Peugeot TotalEnergies", ["wec"]],
   ["Malthe Jakobsen", "Peugeot TotalEnergies", ["wec"]],
   ["Theo Pourchaire", "Peugeot TotalEnergies", ["wec"]],
@@ -888,9 +886,7 @@ function sortedEvents(item = currentItem()) {
 function nextUpcomingEvent(item = currentItem()) {
   const now = new Date();
   const events = sortedEvents(item);
-  const competitionTypes = new Set(["race", "endurance"]);
-  const upcomingCompetition = events.find((event) => competitionTypes.has(event.type) && new Date(event.start) >= now);
-  return upcomingCompetition || events.find((event) => new Date(event.start) >= now) || events[events.length - 1];
+  return events.find((event) => new Date(event.start) >= now) || events[events.length - 1];
 }
 
 function nextVisibleEvent(events) {
